@@ -14,8 +14,12 @@ git clone https://github.com/xuan-li/PAC-NeRF.git
 cd PAC-NeRF
 conda create -n pacnerf python=3.9
 conda activate pacnerf
-conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
+conda install nvidia/label/cuda-11.6.0::cuda-toolkit
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia
+conda install nvidia/label/cuda-11.6.0::libcusparse-dev
+conda install nvidia/label/cuda-11.6.0::libcusolver-dev
 pip install -r requirements.txt
+conda install pytorch-scatter -c pyg
 ```
 
 ## Download Dataset
